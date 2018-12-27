@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{6CD61502-6A83-4230-AEF8-7CBF6FC13AEE}|">
   <MonoDevelop.Ide.ItemProperties.Vidly PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Vidly/App_Start/RouteConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NET-MVC Status">
     <Files>
       <File FileName="Vidly/Views/Movies/Random.cshtml" Line="8" Column="1" />
       <File FileName="Vidly/Models/Movie.cs" Line="1" Column="1" />
       <File FileName="Vidly/Controllers/MoviesController.cs" Line="41" Column="90" />
       <File FileName="Vidly/App_Start/BundleConfig.cs" Line="26" Column="49" />
-      <File FileName="Vidly/App_Start/RouteConfig.cs" Line="16" Column="21" />
+      <File FileName="Vidly/App_Start/RouteConfig.cs" Line="20" Column="54" />
+      <File FileName="NET-MVC Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
