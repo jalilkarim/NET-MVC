@@ -40,17 +40,24 @@ namespace Vidly.Controllers
         }
 
         // GET: Movies
-        public ActionResult Index(int? pageIndex, string sortBy) // int parameter has "?" to make it nullable (optional parameter)
-        { 
-            if(!pageIndex.HasValue)
+        public ViewResult Index() // int parameter has "?" to make it nullable (optional parameter)
+        {
+            /*
+            if (!pageIndex.HasValue)
             {
                 pageIndex = 1;
             }
 
             if (string.IsNullOrWhiteSpace(sortBy))
                 sortBy = "Name";
+            */
+            var allMovies = new List<Movie>
+            {
+                new Movie {Id = 1, Name = "Shrek"},
+                new Movie {Id = 2, Name = "Avatar"}
+            };
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            return View(allMovies);
         }
 
 
