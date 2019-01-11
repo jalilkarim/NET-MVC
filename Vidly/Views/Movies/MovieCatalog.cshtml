@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Vidly.ViewModels.MoviewCatalogViewModel>
+@{
+    ViewBag.Title = "MovieCatalog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie Catalog</h2>
+
+<table class="grid">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>item.Id</td>
+            <td>item.Name</td>
+        </tr>
+    }
+
+</table>

@@ -51,12 +51,16 @@ namespace Vidly.Controllers
             if (string.IsNullOrWhiteSpace(sortBy))
                 sortBy = "Name";
             */
-            var allMovies = new List<Movie>
+            var allMovies = new Movie();
+            allMovies.Id = 1;
+            allMovies.Name = "All Movies";
+
+            /*
             {
                 new Movie {Id = 1, Name = "Shrek"},
                 new Movie {Id = 2, Name = "Avatar"}
             };
-
+            */
             return View(allMovies);
         }
 
@@ -65,6 +69,19 @@ namespace Vidly.Controllers
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content (year + "/" + month);
+        }
+
+        public ActionResult MovieCatalog()
+        {
+            var movieCatalog = new List<Movie>
+            {
+                new Movie {Id = 1, Name = "Shrek"},
+                new Movie {Id = 2, Name = "Avatar"},
+                new Movie {Id = 3, Name = "Paw Patrol"},
+                new Movie {Id = 4, Name = "Moana"},
+                new Movie {Id = 5, Name = "Frozen"}
+            };
+            return View(movieCatalog.ToList());
         }
     }
 }

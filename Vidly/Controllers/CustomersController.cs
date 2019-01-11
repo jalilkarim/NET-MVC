@@ -9,9 +9,13 @@ namespace Vidly.Controllers
 {
     public class Customers:Controller
     {
-        public ContentResult Index()
+        // GET: /Customers
+        public ViewResult Index()
         {
-            return Content ("Hola");
+            var exampleCustomer = new Customer();
+            exampleCustomer.Id = 1;
+            exampleCustomer.Name = "Example Customer";
+            return View (exampleCustomer);
         }
     }    
 }
