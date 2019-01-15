@@ -1,4 +1,4 @@
-﻿@model Vidly.Models.Movie
+﻿@model IEnumerable<Vidly.Models.Movie>
 @{
     ViewBag.Title = "Movies";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,4 +6,29 @@
 
 <h2>Movies Index</h2>
 <p>@Html.ActionLink("Random", "Random", "Movies")</p>
-<p>@Html.ActionLink("Movie Catalog","MovieCatalog","Movies")</p>
+<p>@Html.ActionLink("Movie Catalog", "MovieCatalog", "Movies")</p>
+
+@if (!Model.Any())
+{
+    <p>There are currently no movies in the Database.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thhead>
+            <tr>
+                <th>
+                    Movie
+                </th>
+            </tr>
+        </thhead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
